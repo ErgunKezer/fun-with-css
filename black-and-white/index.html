@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap" rel="stylesheet" />
+    <title>Black and White</title>
+  </head>
+  <body>
+    <div class="custom-cursor"></div>
+    <div class="wrapper">
+      <div class="wrapper-black">BLACK</div>
+      <div class="wrapper-white">WHITE</div>
+    </div>
+    <script>
+      const cursor = document.querySelector('.custom-cursor');
+      document.addEventListener('mousemove', (e) => {
+        const offset = window.innerWidth >= 768 ? 75 : 62.5;
+        cursor.setAttribute('style', `top: ${e.pageY - offset}px; left: ${e.pageX - offset}px`);
+      });
+    </script>
+  </body>
+</html>
